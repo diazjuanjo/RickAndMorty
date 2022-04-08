@@ -19,21 +19,23 @@ function Personaje() {
         }
     }, [dispatch, id]);
 
+    const { name, species, status, origin, location, image } = characterDetail
+
 
     return (
         <div>
-            {characterDetail.name ? (
+            {name ? (
                 <>
                     <div>
-                        <h4>Name: {characterDetail.name}</h4>
-                        <h4>Species: {characterDetail.species}</h4>
-                        <h4>Status: {characterDetail.status}</h4>
-                        <h4>Origin: {characterDetail.origin?.name}</h4>
-                        <h4>Location: {characterDetail.location?.name}</h4>
+                        <h4>Name: {name}</h4>
+                        <h4>Species: {species}</h4>
+                        <h4>Status: {status}</h4>
+                        <h4>Origin: {origin?.name}</h4>
+                        <h4>Location: {location?.name}</h4>
                     </div>
 
                     <div>
-                        <img src={characterDetail.image} alt={characterDetail.name} />
+                        <img src={image} alt={name} />
                     </div>
                 </>
             ) : (

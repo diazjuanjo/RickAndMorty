@@ -7,7 +7,7 @@ import {
 } from '../actions/actionTypes';
 
 const initialState = {
-    charactersAll: [],
+    characters: [],
     characterDetail: [],
     favoriteCharacters: [],
 };
@@ -17,7 +17,7 @@ export default function reducer(state = initialState, { type, payload }) {
         case GET_CHARACTERS:
             return {
                 ...state,
-                charactersAll: payload,
+                characters: payload,
             };
 
         case GET_CHARACTER_DETAIL:
